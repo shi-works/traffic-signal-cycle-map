@@ -10,7 +10,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 - 日本道路交通情報センター（JARTIC）がオープンデータとして公開している、[交差点制御情報（zip形式）](https://www.jartic.or.jp/)を一括でダウンロードするプログラムです。
 #### 使用データ  
 `kousaten_PrefRoman.csv`
-#### データ取得結果  
+#### 出力結果  
 `https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/202304030911.7z`,286.7MB
 
 # データの加工
