@@ -49,7 +49,8 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 ### HTMLtoCSV.py
 - ダウンロードした、htmlファイルの中から座標及び交差点番号を取得し、csvファイルに出力するプログラムです。
 #### 使用データ
-`htmlファイル一式`
+- `htmlファイル一式`
+- 情報源コード一覧
 - 日本道路交通情報センター（JARTIC）が公開している、[交差点制御情報の説明書](https://www.jartic.or.jp/)に記載の情報源コード一覧から作成したデータです。  
 `https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/source_code_information.csv`,2.4KB
 #### 出力結果
