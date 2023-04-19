@@ -5,7 +5,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 # データの加工
 ## 交差点制御情報
 ### calc_average_cycle.py
-- 日本道路交通情報センター（JARTIC）がオープンデータとして公開している、[交差点制御情報](https://www.jartic.or.jp/)から信号の平均サイクル長を算出プログラムです。
+- 日本道路交通情報センター（JARTIC）がオープンデータとして公開している、[交差点制御情報](https://www.jartic.or.jp/)から信号の平均サイクル長を算出するプログラムです。
 #### 使用データ
 - 交差点制御情報（csv形式）
 
