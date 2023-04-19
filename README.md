@@ -43,6 +43,17 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 `https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/signal_cycle.pmtiles`,20.5MB
 
 ## 交差点位置情報
+### intersection_position_getHTML.py
+- 日本交通管理技術協会(https://www.tmt.or.jp/research/index10.html#japanMap)からhtmlファイルを一括でダウンロードするプログラムです。
+
+### HTMLtoCSV.py
+- ダウンロードした、htmlファイルの中から座標及び交差点番号を取得し、csvファイルに出力するプログラムです。
+#### 使用データ
+- 日本道路交通情報センター（JARTIC）が公開している、[交差点制御情報の説明書](https://www.jartic.or.jp/)に記載の情報源コード一覧から作成したデータです。  
+`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/source_code_information.csv`,2.4KB
+
+#### 出力結果
+
 
 # ライセンス
 本データセット（使用データ及び出力結果）は[CC-BY-4.0](https://github.com/shi-works/traffic-accident-pmtiles/blob/main/LICENSE)で提供されます。使用の際には本レポジトリへのリンクを提示してください。
