@@ -6,7 +6,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 ## 交差点制御情報
 ### jartic_opendata_kousaten_dl.py
 - 日本道路交通情報センター（JARTIC）がオープンデータとして公開している、[交差点制御情報（zip形式）](https://www.jartic.or.jp/)を一括でダウンロードするプログラムです。
-#### 使用データ
+#### 使用データ  
 `kousaten_PrefRoman.csv`
 
 # データの加工
@@ -21,8 +21,8 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 
 ### csvfile-add-latlon.py
 - マージ済みの平均サイクル長（csv形式）に信号交差点の位置座標を付与するプログラムです。
-#### 使用データ
-`全国_制御_202302_平均サイクル長.csv`
+#### 使用データ  
+`全国_制御_202302_平均サイクル長.csv`  
 `intersection_position.csv`※後述の交差点位置情報
 
 ## 交差点位置情報
