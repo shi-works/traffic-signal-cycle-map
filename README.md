@@ -12,12 +12,14 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 # データの加工
 ## 交差点制御情報
 ### calc_average_cycle.py
-- [交差点制御情報](https://www.jartic.or.jp/)をもとに、信号の平均サイクル長を算出するプログラムです。
+- [交差点制御情報（csv形式）](https://www.jartic.or.jp/)をもとに、信号の平均サイクル長を算出するプログラムです。
 #### 使用データ
 - 交差点制御情報（csv形式）
 
 ### csvfile-merge.py
 - 算出した、平均サイクル長（csv形式）をマージするプログラムです。
+#### 出力結果  
+`全国_制御_202302_平均サイクル長.csv`
 
 ### csvfile-add-latlon.py
 - マージ済みの平均サイクル長（csv形式）に信号交差点の位置座標を付与するプログラムです。
