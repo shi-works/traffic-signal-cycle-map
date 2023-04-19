@@ -1,6 +1,8 @@
 # traffic-signal-cycle-map
 ## Public Website
 https://shi-works.github.io/traffic-signal-cycle-map/
+## サンプル画像
+![image](https://user-images.githubusercontent.com/71203808/232997203-c44e3aab-d648-4be7-97bd-b635d3eaedb2.png)
 
 # データの取得
 ## 交差点制御情報
