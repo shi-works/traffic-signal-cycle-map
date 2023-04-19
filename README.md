@@ -26,7 +26,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 `https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/National_Control_202302_Average_Cycle.7z`,415.1KB
 
 ### csvfile-merge.py
-- 算出した、平均サイクル長（csv形式）をマージするプログラムです。
+- 算出した、47都道府県の平均サイクル長（csv形式）をマージするプログラムです。
 #### 出力結果  
 `全国_制御_202302_平均サイクル長.csv`
 
