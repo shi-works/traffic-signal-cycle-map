@@ -14,7 +14,7 @@ with open(output_csvfile, 'a', encoding='UTF-8') as f:
 
     # CSVファイルをデータフレームに格納
     data = pd.read_csv(
-        "./全国_制御_202302_平均サイクル長.csv", dtype=object).values.tolist()
+        "./national_Control_202302_Average_Cycle.csv", dtype=object).values.tolist()
 
     # 交差点位置を辞書に読み込み
     csv_file_todouhuken = "intersection_position.csv"
