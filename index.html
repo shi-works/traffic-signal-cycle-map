@@ -98,13 +98,13 @@
             border-radius: 3px;
             bottom: 50px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
-            font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
             padding: 10px;
             position: absolute;
             right: 10px;
             z-index: 1;
-            line-height: 14px;
-            height: 140px;
+            line-height: 16px;
+            height: 170px;
         }
 
         .legend h4 {
@@ -124,6 +124,11 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
+        }
+
+        .square {
+            width: 10px;
+            height: 10px;
         }
     </style>
 
@@ -153,18 +158,23 @@
         <span style="display: inline-block; margin-left: 5px;">150秒以上160秒未満</span><br>
         <div class="circle" style='background-color: rgb(255, 0, 0);display: inline-block;'></div>
         <span style="display: inline-block; margin-left: 5px;">160秒以上</span><br>
+        <div class="square" style='background-color: rgba(255, 191, 0, 0.2);display: inline-block;'></div>
+        <span style="display: inline-block; margin-left: 5px;">人口集中地区（2020年）</span>
     </div>
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         // add the PMTiles plugin to the maplibregl global.
         let protocol = new pmtiles.Protocol();
         maplibregl.addProtocol("pmtiles", protocol.tile);
 
-        let PMTILES_URL = "https://xs489works.xsrv.jp/MapLibreGLJS/22-01/data/signal_cycle.pmtiles";
-        const p = new pmtiles.PMTiles(PMTILES_URL)
+        // let PMTILES_URL = "https://xs489works.xsrv.jp/MapLibreGLJS/22-01/data/signal_cycle.pmtiles";
+        let PMTILES_SIGNAL_URL = "https://web-map-maplibre.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle-map/data/signal_cycle.pmtiles";
+        let PMTILES_DID_URL = "https://web-map-maplibre.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle-map/data/2020_did_ddsw_01-47_JGD2011.pmtiles";
+        const ps = new pmtiles.PMTiles(PMTILES_SIGNAL_URL)
+        const pd = new pmtiles.PMTiles(PMTILES_DID_URL)
 
         // this is so we share one instance across the JS code and the map renderer
-        protocol.add(p);
+        protocol.add(ps);
+        protocol.add(pd);
 
         var map = new maplibregl.Map({
             container: 'map',
@@ -224,11 +234,44 @@
             });
             */
 
+            // 人口集中地区ベクトルタイル
+            map.addSource("did", {
+                type: "vector",
+                url: "pmtiles://" + PMTILES_DID_URL,
+                attribution: '<a href="https://www.e-stat.go.jp/gis">政府統計の総合窓口[e-Stat] 人口集中地区（2020年）</a>'
+            });
+
+            // 人口集中地区ポリゴンレイヤ
+            map.addLayer({
+                "id": "did-polygon",
+                "source": "did",
+                "source-layer": "2020_did_ddsw_0147_JGD2011fgb",
+                "type": "fill",
+                "paint": {
+                    'fill-color': 'rgb(255, 191, 0)',
+                    'fill-opacity': 0.2
+                }
+            });
+
+            /*
+            // 人口集中地区ラインレイヤ
+            map.addLayer({
+                "id": "did-line",
+                "source": "did",
+                "source-layer": "2020_did_ddsw_0147_JGD2011fgb",
+                "type": "line",
+                "paint": {
+                    'line-color': 'rgb(255, 0, 0)',
+                    'line-width': 1
+                }
+            });
+            */
+
             // 信号サイクルベクトルタイル
             map.addSource("signal", {
                 type: "vector",
-                url: "pmtiles://" + PMTILES_URL,
-                attribution: '<a href="https://www.jartic.or.jp/">日本道路交通情報センター（JARTIC） 交差点制御情報</a> | <a href="https://www.tmt.or.jp/research/index10.html">日本交通管理技術協会 交差点位置情報</a></a>'
+                url: "pmtiles://" + PMTILES_SIGNAL_URL,
+                attribution: '<a href="https://www.jartic.or.jp/">日本道路交通情報センター[JARTIC] 交差点制御情報</a> | <a href="https://www.tmt.or.jp/research/index10.html">日本交通管理技術協会 交差点位置情報</a></a>'
             });
 
             // 信号サイクルポイント
