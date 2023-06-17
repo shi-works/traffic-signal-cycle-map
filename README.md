@@ -28,7 +28,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 ### csvfile-merge.py
 - 算出した、47都道府県の平均サイクル長（csv形式）をマージするプログラムです。
 #### 出力結果  
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/national_Control_202302_Average_Cycle.csv`,7.2MB
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/out/national_Control_202302_Average_Cycle.csv`,7.2MB
 
 ### csvfile-add-latlon.py
 - マージ済みの平均サイクル長（csv形式）に信号交差点の位置座標を付与するプログラムです。
