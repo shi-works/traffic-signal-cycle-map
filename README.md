@@ -52,9 +52,9 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 - `htmlファイル一式`
 - 情報源コード一覧
 - 日本道路交通情報センター（JARTIC）が公開している、[交差点制御情報の説明書](https://www.jartic.or.jp/)に記載の情報源コード一覧から作成したデータです。  
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/source_code_information.csv`,2.4KB
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/data/source_code_information.csv`,2.4KB
 #### 出力結果
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/intersection_position.csv`,668.7KB
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/data/intersection_position.csv`,668.7KB
 
 # ライセンス
 本データセット（使用データ及び出力結果）はCC-BY-4.0で提供されます。使用の際には本レポジトリへのリンクを提示してください。
