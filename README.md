@@ -36,11 +36,11 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 `https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/out/national_Control_202302_Average_Cycle.csv`,7.2MB  
 `https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/data/intersection_position.csv`,668.7KB※後述の交差点位置情報
 #### 出力結果
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/signal_cycle.csv`,13.3MB  
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/out/signal_cycle.csv`,13.3MB  
 ※参考1（csvファイルをgeojsonファイルに変換したもの）  
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/signal_cycle.geojson`,61.3MB  
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/out/signal_cycle.geojson`,61.3MB  
 ※参考2（geojsonファイルをpmtilesファイルに変換したもの）  
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/signal_cycle.pmtiles`,20.5MB
+`https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/out/signal_cycle.pmtiles`,20.5MB
 
 ## 交差点位置情報
 ### intersection_position_getHTML.py
