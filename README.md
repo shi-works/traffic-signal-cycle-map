@@ -21,7 +21,7 @@ https://shi-works.github.io/traffic-signal-cycle-map/
 - 交差点制御情報
 - zipファイルをcsvファイルに解凍したものを使用
 - ファイル名に「制御」の記載のあるcsvファイルを使用  
-`https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/data/202304030911.7z`,286.7MB
+https://xs489works.xsrv.jp/pmtiles-data/traffic-signal-cycle/data/202304030911.7z`,286.7MB
 #### 出力結果  
 `https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/traffic-signal-cycle/out/Pref_Control_202302_Average_Cycle.7z`,415.1KB
 
